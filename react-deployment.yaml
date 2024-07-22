@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: documanque-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: documanque-client
+  template:
+    metadata:
+      labels:
+        app: documanque-client
+    spec:
+      containers:
+        - name: documanque-client
+          image: zakarialagraini/documanque-client:latest
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: documanque-client-service
+spec:
+  selector:
+    app: documanque-client
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
