@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import Footer from './Footer';
-import Header from './Header';
+import Nav from './Nav';
 import swal from 'sweetalert';
 import { RiContactsFill, RiMailFill, RiPhoneFill, RiLockFill, RiEditBoxFill, RiDeleteBin2Fill } from 'react-icons/ri';
 
@@ -117,8 +116,8 @@ const Settings = () => {
 
   return (
     <>
-      <Header loggedIn={true} />
-      <main className="announce-container">
+                <Nav loggedIn={sessionStorage.getItem("id") == null ? false : true}/>
+                <main className="announce-container">
 
         <div className="announce-form settings-form" >
           <legend>MON COMPTE</legend>
@@ -161,7 +160,6 @@ const Settings = () => {
 
 
       </main>
-      <Footer class="mainFooter" />
     </>
   )
 }

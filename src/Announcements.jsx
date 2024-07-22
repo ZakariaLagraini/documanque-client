@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Footer from './Footer';
-import Header from './Header';
-import { AnnouncementCard } from './AnnouncementCard';
+import Nav from './Nav';import { AnnouncementCard } from './AnnouncementCard';
 import { HiDocumentSearch } from 'react-icons/hi';
 import { MdFilterAlt } from 'react-icons/md';
 
@@ -24,7 +22,7 @@ const Announcements = () => {
 
     return (
         <>
-            <Header loggedIn={sessionStorage.getItem("id") == null ? false : true} />
+                <Nav loggedIn={sessionStorage.getItem("id") == null ? false : true}/>
 
             <main className="announcements-main">
 
@@ -56,7 +54,6 @@ const Announcements = () => {
                 </section>
 
             </main>
-            <Footer class="mainFooter" />
         </>
     )
 }

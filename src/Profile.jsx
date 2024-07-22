@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import Header from './Header';
-import { MdOutlineMailOutline, MdDeleteForever } from 'react-icons/md';
+import Nav from './Nav';import { MdOutlineMailOutline, MdDeleteForever } from 'react-icons/md';
 import { HiDocumentCheck, HiDocumentMagnifyingGlass } from 'react-icons/hi2';
 import swal from 'sweetalert';
 import { FiPhone } from 'react-icons/fi';
 import { AiFillEye } from 'react-icons/ai';
-import { Footer } from './Footer';
 
 
 let Profile = () => {
@@ -66,7 +64,7 @@ let Profile = () => {
 
         return (
             <>
-                <Header loggedIn={true} />
+                <Nav loggedIn={sessionStorage.getItem("id") == null ? false : true}/>
                 <main className="profile-main">
                     <div className="profile-card">
                         <div name="cover">
@@ -97,7 +95,6 @@ let Profile = () => {
                         }
                     </div>
                 </main>
-                <Footer class="mainFooter"></Footer>
             </>
         )
     }

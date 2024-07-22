@@ -14,7 +14,6 @@ body {
   --shady: #21202b26;
   --shadier: #21202b1a;
   background-color: var(--back-color);
-
 }
 
 @font-face {
@@ -165,10 +164,7 @@ main {
   overflow: hidden;
   margin-top: 60px;
   position: relative;
-}
-
-.main {
-  height: 356px;
+  /* padding-bottom: 120px !important; */
 }
 
 main h2 {
@@ -300,6 +296,10 @@ main h2 span {
   margin-top: 50px;
   background-color: var(--purple);
   display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   flex-wrap: wrap;
   overflow: hidden;
   justify-content: space-around;
@@ -308,9 +308,6 @@ main h2 span {
   color: var(--back-color);
 }
 
-.mainFooter ul h3 {
-  margin-bottom: 25px;
-}
 
 .mainFooter ul {
   margin-right: 30px;
@@ -318,6 +315,10 @@ main h2 span {
 
 .mainFooter ul:first-child {
   margin-left: 30px;
+}
+
+.mainFooter ul h3 {
+  margin-bottom: 25px;
 }
 
 .mainFooter ul li {
@@ -523,13 +524,18 @@ main h2 span {
 .sign-in-form fieldset input,
 .sign-in-form .connect {
   height: 40px;
-  width: 550px;
+  /* width: 550px; */
   text-indent: 10px;
   font-weight: bold;
   outline: none;
   border-radius: 12px;
   border: 2px solid var(--shady);
   color: var(--dark);
+}
+
+.connect {
+  width: 100% !important;
+  height: 35px !important;
 }
 
 .sign-in-form fieldset input {
@@ -633,7 +639,7 @@ select[name="type-dip"],
 
 .announce-form select[name="nom-document"] {
   height: 40px;
-  width: 650px;
+  /* width: 650px; */
   margin: 15px 0 0 0;
   text-indent: 10px;
   font-weight: bold;
@@ -643,7 +649,7 @@ select[name="type-dip"],
 }
 
 .announce-form fieldset {
-  width: 650px;
+  /* width: 650px; */
   border-radius: 24px;
   border: 2px solid var(--shady);
   margin-top: 15px;
@@ -792,6 +798,12 @@ select[name="type-dip"],
   border-radius: 0 0 12px 12px;
 }
 
+a,
+a:hover,
+a:visited {
+  text-decoration: none !important;
+}
+
 
 @keyframes fadeIn {
   0% {
@@ -866,7 +878,7 @@ select[name="type-dip"],
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 400px;
+  /* width: 400px; */
   border-radius: 12px;
   padding-bottom: 50px;
   border: 3px solid var(--shady);
@@ -955,7 +967,7 @@ select[name="type-dip"],
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 750px;
+  /* width: 750px; */
   height: 400px;
   border-radius: 12px 0 0 12px;
   border: 3px solid var(--shady);
@@ -971,7 +983,7 @@ select[name="type-dip"],
   padding: 20px 0 20px 0;
   position: absolute;
   border-bottom: 1px solid var(--shady);
-  width: 580px;
+  /* width: 580px; */
 }
 
 .announcement {
@@ -988,7 +1000,7 @@ select[name="type-dip"],
 
 
 .announcement p {
-  width: 200px;
+  /* width: 200px; */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1025,7 +1037,7 @@ select[name="type-dip"],
   align-items: center;
   border: 2px solid var(--shady);
   border-radius: 60px;
-  width: 670px;
+  /* width: 670px; */
   height: max-content;
   padding: 10px 15px 10px 15px;
   margin: 5px;
@@ -1078,7 +1090,7 @@ select[name="type-dip"],
 
 .announcement-card-info p,
 .announcement-card-info h3 {
-  width: 490px;
+  /* width: 490px; */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1113,7 +1125,7 @@ select[name="type-dip"],
   justify-content: center;
   margin: 60px 0 60px 0;
   height: 50px;
-  width: 700px;
+  /* width: 700px; */
 }
 
 .announcements-search input[type=text] {
@@ -1204,12 +1216,12 @@ select[name="type-dip"],
 .settings-input {
   display: flex;
   align-items: center;
-  width: 650px;
+  /* width: 650px; */
 }
 
 .settings-nom-prenom input,
 .settings-nom-prenom button {
-  max-width: 310px;
+  /* max-width: 310px; */
 }
 
 .settings-nom-prenom input,
@@ -1231,7 +1243,7 @@ select[name="type-dip"],
 .settings-checkbox {
   display: flex;
   align-items: center;
-  width: 650px;
+  /* width: 650px; */
   margin-top: 15px;
 }
 
@@ -1246,7 +1258,7 @@ select[name="type-dip"],
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  width: 750px;
+  /* width: 750px; */
   border-radius: 12px;
   border: 3px solid var(--shady);
   background-color: white;
@@ -1330,7 +1342,7 @@ select[name="type-dip"],
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 770px;
+  /* width: 770px; */
   border-radius: 12px;
   border: 3px solid var(--shady);
   background-color: white;

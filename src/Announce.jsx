@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Header from './Header';
-import { Footer } from "./Footer";
-import swal from 'sweetalert';
+import Nav from './Nav';import swal from 'sweetalert';
 
 const Announce = () => {
 
@@ -124,8 +122,8 @@ const Announce = () => {
     }
     return (
         <>
-            <Header loggedIn={sessionStorage.getItem("id") == null ? false : true} />
-            <main className="announce-container">
+                <Nav loggedIn={sessionStorage.getItem("id") == null ? false : true}/>
+                <main className="announce-container">
 
                 <div className="announce-form" id="Announce" action="Announce" method="post" style={{ display: "flex" }}>
                     <legend className="ms-suggestion">PUBLIER UNE ANNONCE</legend>
@@ -237,7 +235,6 @@ const Announce = () => {
                 </div>
 
             </main>
-            <Footer class="mainFooter" />
         </>
     );
 }

@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Header from './Header';
-import userPfp from './sources/userPfp.png';
+import Nav from './Nav';import userPfp from './sources/userPfp.png';
 import { MdOutlineMailOutline, MdAccessTimeFilled } from 'react-icons/md';
 import { FiPhone } from 'react-icons/fi';
 import { FaComments } from 'react-icons/fa';
 import { AiOutlineStop } from 'react-icons/ai';
 import { RiSendPlane2Fill } from 'react-icons/ri';
-import { Footer } from './Footer';
 import { Comment } from './Comment';
 import swal from 'sweetalert';
 // import { FaFacebook, FaTwitter, FaLinkedin, FaShareSquare } from 'react-icons/fa';
@@ -65,8 +63,8 @@ const Announcement = () => {
 
     return (announcement.postedBy != null &&
         <>
-            <Header loggedIn={sessionStorage.getItem("id") == null ? false : true} />
-            <main className="profile-main">
+                <Nav loggedIn={sessionStorage.getItem("id") == null ? false : true}/>
+                <main className="profile-main">
 
                 <div className="profile-card">
                     <div name="cover">
@@ -182,7 +180,6 @@ const Announcement = () => {
                 </section>
 
             </main>
-            <Footer class="mainFooter"></Footer>
         </>
     )
 }

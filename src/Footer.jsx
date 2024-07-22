@@ -2,10 +2,10 @@ import React from 'react';
 import {BsInstagram, BsTwitter} from "react-icons/bs";
 import {ImFacebook} from 'react-icons/im';
 
-export const Footer = (props) => {
+export const Footer = () => {
   return (
     <>
-    <footer className={props.class}>
+    <footer className="mainFooter">
     <div className="endFooter">
         <div className="endFooterLeft">
             <span>© {new Date().getFullYear()} DOCUMANQUE</span>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
+import Nav from './Nav';
 import swal from 'sweetalert';
 import { RiContactsFill, RiMailFill, RiPhoneFill, RiLockFill } from 'react-icons/ri';
 const SignIn = () => {
@@ -192,7 +192,7 @@ const SignIn = () => {
     }
     return (
         <>
-            <Header></Header>
+            <Nav loggedIn={sessionStorage.getItem("id") == null ? false : true} />
             <main className="sign-in-container">
 
                 <div className="sign-in-form" id="signUp" style={{ display: "flex" }}>
@@ -221,7 +221,7 @@ const SignIn = () => {
                     <button className="connect" onClick={() => createAccount()}>Créer un compte</button>
                 </div>
 
-                <div className="sign-in-form tmg70" id="signIn" style={{ display: "flex" }}>
+                <div className="sign-in-form" id="signIn" style={{ display: "flex" }}>
                     <legend>Connéxion</legend>
                     <fieldset>
                         <label><RiMailFill /></label>
@@ -235,7 +235,7 @@ const SignIn = () => {
                     <button className="connect" onClick={() => logIn()}>Se connecter</button>
                 </div>
 
-                <p style={{ marginTop: "10px" }}>{clicked ? "Avez-vous déja un compte ? Vous pouvez " : "Vous n'avez pas de compte ? Vous pouvez "}
+                <p style={{ marginTop: "10px", textAlign: "center" }}>{clicked ? "Avez-vous déja un compte ? Vous pouvez " : "Vous n'avez pas de compte ? Vous pouvez "}
                     <button onClick={() => setClicked(!clicked)}>{clicked ? "vous connécter" : "créer un compte"}</button></p>
 
             </main>
