@@ -8,7 +8,7 @@ const Verify = () => {
     if (sessionStorage.getItem("id") != null) sessionStorage.clear();
 
     async function fetchVerification() {
-        const response = await fetch('https://documanque-server.onrender.com/utilisateur/verify?token=' + query.get("token"));
+        const response = await fetch('https://documanque-server.onrender.com:8084/utilisateur/verify?token=' + query.get("token"));
         return response.json();
     }
 

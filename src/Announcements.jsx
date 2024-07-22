@@ -18,7 +18,7 @@ const Announcements = () => {
     }, []);
 
     async function fetchAnnouncements() {
-        const response = await fetch('https://documanque-server.onrender.com/annonce/getAnnoncesBySearch?search=' + query.get("search"))
+        const response = await fetch('https://documanque-server.onrender.com:8084/annonce/getAnnoncesBySearch?search=' + query.get("search"))
         return response.json();
     }
 

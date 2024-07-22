@@ -45,7 +45,7 @@ const Announcement = () => {
             icon: "warning"
         })
         else {
-            await fetch("https://documanque-server.onrender.com/commentaire/addComment", {
+            await fetch("https://documanque-server.onrender.com:8084/commentaire/addComment", {
                 method: 'POST',
                 body: JSON.stringify({
                     postedBy: sessionStorage.getItem("id"),
