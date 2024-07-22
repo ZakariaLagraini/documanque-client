@@ -69,7 +69,7 @@ const SignIn = () => {
             document.getElementById("suwarning").appendChild(pp);
         }
         else {
-            const response = await fetch('http://localhost:8084/utilisateur/signUp', {
+            const response = await fetch('https://documanque-server.onrender.com/utilisateur/signUp', {
                 method: 'POST',
                 body: JSON.stringify({
                     nom: suNom,
@@ -140,7 +140,7 @@ const SignIn = () => {
             document.getElementById("siwarning").appendChild(pp);
         }
         else {
-            const response = await fetch('http://localhost:8084/utilisateur/logIn', {
+            const response = await fetch('https://documanque-server.onrender.com/utilisateur/logIn', {
                 method: 'POST',
                 body: JSON.stringify({
                     email: siEmail,
