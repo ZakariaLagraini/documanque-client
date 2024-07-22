@@ -65,7 +65,7 @@ const Settings = () => {
       && document.getElementById("tel").value === sessionStorage.getItem("tel")) {
       window.alert("Vous n'avez apporté aucune modification!");
     } else {
-      const response = await fetch("https://documanque-server.onrender.com:8084/utilisateur/modifyInfo", {
+      const response = await fetch("https://documanque-server.onrender.com/utilisateur/modifyInfo", {
         method: 'PUT',
         body: JSON.stringify({
           id: user.id,

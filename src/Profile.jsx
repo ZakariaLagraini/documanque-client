@@ -20,13 +20,13 @@ let Profile = () => {
         }, []);
 
         async function fetchAnnouncements() {
-            const response = await fetch('https://documanque-server.onrender.com:8084/annonce/getAnnoncesByUser?user=' + sessionStorage.getItem("id"))
+            const response = await fetch('https://documanque-server.onrender.com/annonce/getAnnoncesByUser?user=' + sessionStorage.getItem("id"))
             return response.json();
         }
 
         let deleteAnnouncement = async (id) => {
             if (window.confirm("Etes-vous surs ?")) {
-                const response = await fetch('https://documanque-server.onrender.com:8084/annonce/deleteAnnonce?idannonce=' + id + '&iduser=' + sessionStorage.getItem("id"))
+                const response = await fetch('https://documanque-server.onrender.com/annonce/deleteAnnonce?idannonce=' + id + '&iduser=' + sessionStorage.getItem("id"))
 
                 if (response.status >= 500) await swal({
                     title: "Erreur",

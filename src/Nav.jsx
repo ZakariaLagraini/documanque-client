@@ -61,7 +61,7 @@ let Nav = (props) => {
     }
 
     async function fetchNotifications() {
-        const response = await fetch('https://documanque-server.onrender.com:8084/notification/getNotifications?id=' + sessionStorage.getItem("id"));
+        const response = await fetch('https://documanque-server.onrender.com/notification/getNotifications?id=' + sessionStorage.getItem("id"));
         return response.json();
     }
 

@@ -22,7 +22,7 @@ const Announce = () => {
     }, [selected]);
 
     let postAnonymousAnnonce = async () => {
-        const response = await fetch("https://documanque-server.onrender.com:8084/annonce/postAnonymousAnnonce", {
+        const response = await fetch("https://documanque-server.onrender.com/annonce/postAnonymousAnnonce", {
             method: 'POST',
             body: JSON.stringify({
                 typeAnnonce: document.getElementById("trv").checked ? 1 : 0,
@@ -83,7 +83,7 @@ const Announce = () => {
         }
     }
     let postAnnonce = async () => {
-        const response = await fetch("https://documanque-server.onrender.com:8084/annonce/postAnnonce", {
+        const response = await fetch("https://documanque-server.onrender.com/annonce/postAnnonce", {
             method: 'POST',
             body: JSON.stringify({
                 typeAnnonce: document.getElementById("trv").checked ? 1 : 0,

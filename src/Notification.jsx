@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 let Notification = (props) => {
 
     let handleClick = async (props) => {
-        if (!props.seen) await fetch("https://documanque-server.onrender.com:8084/notification/markAsSeen?id=" + props.idNotif);
+        if (!props.seen) await fetch("https://documanque-server.onrender.com/notification/markAsSeen?id=" + props.idNotif);
         window.location.href = "/Announcement?id=" + props.idAnnonce;
     }
 
