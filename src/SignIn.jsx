@@ -87,7 +87,7 @@ const SignIn = () => {
 
             if (response.status >= 400 && response.status < 500) await swal({
                 title: "Erreur",
-                text: "Veuillez revérifier les informations que vous avez insérées.",
+                text: "Veuillez vérifier les informations que vous avez saisies.",
                 icon: "warning"
             })
             if (response.status >= 500) await swal({
@@ -102,17 +102,17 @@ const SignIn = () => {
                 const user = JSON.parse(JSON.stringify(data));
                 if (user.id === '-1') await swal({
                     title: "Erreur",
-                    text: "Un compte avec cet E-mail/Numéro de téléphone existe déjà!",
+                    text: "Un compte avec cet E-mail/Numéro de téléphone existe  !",
                     icon: "warning"
                 })
                 else if (user.id === '-2') await swal({
                     title: "Erreur",
-                    text: "Veuillez insérer un numéro de téléphone valide!",
+                    text: "Veuillez insérer un numéro de téléphone valide !",
                     icon: "warning"
                 })
                 else if (user.id === '-4') await swal({
                     title: "Erreur",
-                    text: "Veuillez insérer une adresse e-mail valide!",
+                    text: "Veuillez insérer une adresse e-mail valide !",
                     icon: "warning"
                 })
                 else {
@@ -153,7 +153,7 @@ const SignIn = () => {
 
             if (response.status >= 400 && response.status < 500) await swal({
                 title: "Erreur",
-                text: "Veuillez revérifier les informations que vous avez insérées.",
+                text: "Veuillez vérifier les informations que vous avez saisies.",
                 icon: "warning"
             })
             else if (response.status >= 500) await swal({
@@ -167,13 +167,13 @@ const SignIn = () => {
                 const user = await JSON.parse(JSON.stringify(data));
                 if (user == null) await swal({
                     title: "Erreur",
-                    text: "Il n'existe aucun compte avec les données insérées!",
+                    text: "Il n'existe aucun compte avec les données insérées !",
                     icon: "warning",
                     dangerMode: true,
                 })
                 else if (user.id === "-3") await swal({
                     title: "Erreur",
-                    text: "Votre compte n'est pas encore vérifier!",
+                    text: "Votre compte n'est pas encore vérifié !",
                     icon: "warning",
                     dangerMode: true,
                 })

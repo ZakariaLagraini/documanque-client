@@ -87,17 +87,17 @@ const Settings = () => {
         const result = JSON.parse(JSON.stringify(data));
         if (result.id === '-1') await swal({
           title: "Erreur",
-          text: "Vous avez inséré un mauvais mot de passe!",
+          text: "Vous avez entré un mauvais mot de passe !",
           icon: "warning"
         })
         else if (result.id === '-2') await swal({
           title: "Erreur",
-          text: "Il existe déja un compte avec cet email!",
+          text: "Il existe déja un compte avec cet email !",
           icon: "warning"
         })
         else if (result.id === '-3') await swal({
           title: "Erreur",
-          text: "Il existe déja un compte avec ce numéro de télephone!",
+          text: "Il existe déja un compte avec ce numéro de téléphone !",
           icon: "warning"
         })
         else {

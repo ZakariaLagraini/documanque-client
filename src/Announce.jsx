@@ -105,7 +105,7 @@ const Announce = () => {
         });
         if (response.status >= 400 && response.status < 500) await swal({
             title: "Erreur",
-            text: "Veuillez revérifier les informations que vous avez insérées.",
+            text: "Veuillez vérifier les informations que vous avez saisies.",
             icon: "warning"
         })
         else if (response.status >= 500) await swal({
